@@ -2,43 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://ie-2007.github.io/about/</loc>
     <lastmod>2026-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://ie-2007.github.io/</loc>
     <lastmod>2026-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/projects/</loc>
+    <loc>https://ie-2007.github.io/portfolio/projects/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/projects/yongle-canyin/</loc>
+    <loc>https://ie-2007.github.io/portfolio/projects/yongle-canyin/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/</loc>
+    <loc>https://ie-2007.github.io/portfolio/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://ie-2007.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://ie-2007.github.io/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/liuhuanhe/eassy/</loc>
+    <loc>https://ie-2007.github.io/portfolio/liuhuanhe/eassy/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/liuhuanhe/ancientchinese/</loc>
+    <loc>https://ie-2007.github.io/portfolio/liuhuanhe/ancientchinese/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/tech/</loc>
+    <loc>https://ie-2007.github.io/blog/tech/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/liuhuanhe/</loc>
+    <loc>https://ie-2007.github.io/portfolio/liuhuanhe/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/life/</loc>
+    <loc>https://ie-2007.github.io/blog/life/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/liuhuanhe/poetry/</loc>
+    <loc>https://ie-2007.github.io/portfolio/liuhuanhe/poetry/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://ie-2007.github.io/blog/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/academic/</loc>
+    <loc>https://ie-2007.github.io/portfolio/academic/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/study/</loc>
+    <loc>https://ie-2007.github.io/blog/study/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/liuhuanhe/politics/</loc>
+    <loc>https://ie-2007.github.io/portfolio/liuhuanhe/politics/</loc>
   </url>
 </urlset>

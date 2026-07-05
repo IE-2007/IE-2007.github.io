@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>生活 on IE-2007G的个人主页</title>
-    <link>http://localhost:1313/blog/life/</link>
+    <link>https://ie-2007.github.io/blog/life/</link>
     <description>Recent content in 生活 on IE-2007G的个人主页</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <atom:link href="http://localhost:1313/blog/life/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ie-2007.github.io/blog/life/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
