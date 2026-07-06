@@ -65,7 +65,16 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="https://ie-2007.github.io/blog/study/">
+</script><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" crossorigin></script>
+<meta property="og:url" content="https://ie-2007.github.io/blog/study/">
   <meta property="og:site_name" content="IE-2007G的个人主页">
   <meta property="og:title" content="学习">
   <meta property="og:description" content="学习板块侧重知识分享，学习体会等。">

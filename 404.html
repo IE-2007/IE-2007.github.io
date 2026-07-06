@@ -64,7 +64,16 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="https://ie-2007.github.io/404.html">
+</script><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" crossorigin></script>
+<meta property="og:url" content="https://ie-2007.github.io/404.html">
   <meta property="og:site_name" content="IE-2007G的个人主页">
   <meta property="og:title" content="404 Page not found">
   <meta property="og:description" content="个人主页与作品集">

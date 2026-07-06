@@ -71,7 +71,16 @@ GitHub：IE-2007
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="https://ie-2007.github.io/about/">
+</script><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" crossorigin></script>
+<meta property="og:url" content="https://ie-2007.github.io/about/">
   <meta property="og:site_name" content="IE-2007G的个人主页">
   <meta property="og:title" content="关于我">
   <meta property="og:description" content="你好，我是IE-2007G 上海交通大学工业工程系本科在读学生。
