@@ -13,7 +13,7 @@
       <link>https://ie-2007.github.io/blog/study/math_modeling_notes260706/</link>
       <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://ie-2007.github.io/blog/study/math_modeling_notes260706/</guid>
-      <description>&lt;h2 id=&#34;数学建模的论文写作-陈雄达-20260706&#34;&gt;数学建模的论文写作 陈雄达 20260706&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;数学建模的论文写作&#34;&gt;数学建模的论文写作&lt;/h2&gt;
 &lt;h3 id=&#34;赛事时间问题&#34;&gt;赛事时间问题&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;20260910 18:00发布题目，20260913 20:00结束&lt;/li&gt;
@@ -98,8 +98,142 @@
 &lt;li&gt;分工组织：要求每个人能做任何事情，但是可以一个人在某一块稍微多做一点（论文、程序、模型）。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;常微分方程的应用-董程栋-20260706&#34;&gt;常微分方程的应用 董程栋 20260706&lt;/h2&gt;
-&lt;p&gt;1.经典的传染病模型&lt;/p&gt;</description>
+&lt;h2 id=&#34;常微分方程的应用&#34;&gt;常微分方程的应用&lt;/h2&gt;
+&lt;p&gt;1.经典的传染病模型&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;指数增长 $$i(t)=i_0e^{\lambda t}$$ （传染病早期）&lt;/li&gt;
+&lt;li&gt;阻滞增长 I-S模型 概率上，一个病人一天接触的人不会全都是健康人，类似logistics曲线的形状。$$\frac{di}{dt}=\lambda i (1-i)$$&lt;/li&gt;
+&lt;li&gt;SIS模型 病人可以被治愈$$\frac{di}{dt}=\lambda i(1-i)-\mu i$$&lt;/li&gt;
+&lt;li&gt;SIR模型 被治愈的人有免疫力，不会再得病 常微分方程组
+$$ \left\{
+\begin{aligned}
+\frac{di}{dt} = \lambda si -\mu i \\
+\frac{ds}{dt} = -\lambda si \\
+\frac{dr}{dt} = \mu i
+\end{aligned}
+\right.
+$$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2.微分方程&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>数学建模赛前系列讲座笔记(2)</title>
+      <link>https://ie-2007.github.io/blog/study/math_modeling_notes260707/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/blog/study/math_modeling_notes260707/</guid>
+      <description>&lt;h2 id=&#34;2025b题解析&#34;&gt;2025B题解析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;偏物理的题目背景 碳化硅外延层厚度的确定，事实上这种题目看似难实则反而会有很多资料可用。&lt;/li&gt;
+&lt;li&gt;光学背景 需要自己找资料&lt;/li&gt;
+&lt;li&gt;红外干涉法 想到折射率这个数据。折射率跟什么有关？光的波长频率/厚度/材料？&lt;/li&gt;
+&lt;li&gt;第一小问：最简单的干涉模型——双光束干涉建模（光程差）&lt;/li&gt;
+&lt;li&gt;第二小问：题目提供数据，算法设计与验证&lt;/li&gt;
+&lt;li&gt;第三小问：多光束效应的修正&lt;/li&gt;
+&lt;li&gt;干涉的条件？&lt;/li&gt;
+&lt;li&gt;光程差公式 实际上就是把图中的边全部按照三角函数，结合斯涅耳定律（折射定律）表示，求出光程差。自然，空气的折射率等数据是可以查到的。&lt;/li&gt;
+&lt;li&gt;ABC题获奖个数相同，因此A比较划算&lt;/li&gt;
+&lt;li&gt;考虑数据可视化和无效区域的剔除 滤波 数字信号处理&lt;/li&gt;
+&lt;li&gt;验证：用双光束已经做好的内容去验证实际数据，如果很吻合那就“差不多了”。&lt;/li&gt;
+&lt;li&gt;多光束，会有多个相互平行的反射光（当然需要入射光的强度足够强），当双光束精度不够才需要多光束。&lt;/li&gt;
+&lt;li&gt;不要怕专业性问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;最优化建模和案例分析&#34;&gt;最优化建模和案例分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;每年至少一题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;最优化建模&#34;&gt;最优化建模&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;更改决策变量，满足约束条件，使得目标函数达到最优。&lt;/li&gt;
+&lt;li&gt;工程设计成本最低，有限资源分配效益最高，城建规划有利于各行业发展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;选址问题
+决策变量-约束条件-目标函数分别是什么？怎么样用数学语言表示？
+整体的送货量最终是一个矩阵，可以发现这个矩阵的行和列之和都有约束条件。&lt;/li&gt;
+&lt;li&gt;投资问题
+决策变量：投资什么项目，准确地说，每个项目可以投或者不投，是一个0-1函数；约束条件：投资的钱不能超过本金；目标函数：收益（最大化）。&lt;/li&gt;
+&lt;li&gt;水箱控制参数
+决策变量：题目给出一个电压的控制表达式，我们要做的是调参；约束条件：是一个二阶的微分方程组；目标函数：稳定越快越好，但是我们可以做从0到无穷的反常积分，求最小值。&lt;/li&gt;
+&lt;li&gt;小结
+决策变量：连续性，整数型，0-1型。
+约束条件：全线性约束，至少一个非线性函数约束，微分方程约束（描述变化的过程）。
+目标函数：线性和非线性都有。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;求解算法概述&#34;&gt;求解算法概述&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;优化求解器（&lt;strong&gt;CPLEX&lt;/strong&gt;，Gurobi，Lingo）&lt;/li&gt;
+&lt;li&gt;Matlab非线性优化求解器（fmincon）&lt;/li&gt;
+&lt;li&gt;启发式算法（&lt;strong&gt;模拟退火算法&lt;/strong&gt;，遗传算法，粒子群算法，蚁群算法，后3个选1）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;cplex&#34;&gt;CPLEX&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;适用于线性规划（LP）和LP的一些拓展。&lt;/li&gt;
+&lt;li&gt;Matlab进行编程，网上教程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;定义决策变量
+用矩阵创建好变量数组。&lt;/li&gt;
+&lt;li&gt;构建约束条件
+所有的约束条件都放在一个数组中。利用线性代数知识，矩阵乘法表达不等式和方程组，不等式和方程要分开列。&lt;/li&gt;
+&lt;li&gt;定义目标函数
+直接写出目标函数即可。注意：&lt;strong&gt;CPLEX只能求解min问题，如果要求最大值，把整个函数乘以-1即可。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;配置CPLEX求解器自动求解（求解器会自动选择求解方法进行求解）&lt;/li&gt;
+&lt;li&gt;利用value函数显示结果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;fmincon&#34;&gt;fmincon&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;遇到非线性约束，fmincon可以，CPLEX不行。对非线性不等式和方程，注意：即使是形如绝对值的也是看作非线性。&lt;/li&gt;
+&lt;li&gt;然而，CPLEX最多可以解决几万条约束和变量，而fmincon只有几十到几百。&lt;/li&gt;
+&lt;li&gt;还是用Matlab编程。&lt;/li&gt;
+&lt;li&gt;fmincon要设置初值解，然后慢慢迭代。&lt;/li&gt;
+&lt;li&gt;sqp算法&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;只能求解ax&amp;lt;=b或者c&amp;lt;d这样的形式！不能反过来变成大于号带进去！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;模拟退火算法&#34;&gt;模拟退火算法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;什么是启发式算法：本质还是基于直观和经验的&lt;strong&gt;局部优化算法&lt;/strong&gt;，因此很大可能不是最优的。（A题有时候是只能用启发式算法）&lt;/li&gt;
+&lt;li&gt;模拟退火算法：经过热涨落，热平衡，最后回到能量最低的一种状态。我们先进行“加温”，然后退火，循环加热降温，得到的解接近最优。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;生成初始可行解：理论上应该写一个随机解。或者是一个自己挑选好的较好的解，这样你可以让初始温度适当升高，否则陷入局部最优解。（但是模拟退火的鲁棒性较强，问题不会很大。）&lt;/li&gt;
+&lt;li&gt;目标函数：&lt;strong&gt;只能解决min问题&lt;/strong&gt;，工作量较大。&lt;/li&gt;
+&lt;li&gt;扰动函数：（&lt;strong&gt;自己定义&lt;/strong&gt;的一种变换）对于当前的可行解进行扰动，并产生一个候选解，同样符合约束条件。拓展：阀函数。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;注意扰动产生的候选解不能有某种倾向，要遍布整个解空间。每个决策变量有均等的概率被扰动，而且扰动程度不要过大，否则随机性太大难以收敛。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Metropolis准则：是否要接受候选解？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;如果候选解比现在的解更好，当然接受。&lt;/li&gt;
+&lt;li&gt;如果更差，以&lt;strong&gt;一定概率（e指数相关）接受&lt;/strong&gt;，为什么？否则变成贪心算法。这样一定会陷入局部最优解！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;行商问题（TSP问题）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;用矩阵来思考这个问题！（是一个类似单位矩阵的结构！）每行每列正好和为1，且1不能出现在对角线上。&lt;/li&gt;
+&lt;li&gt;用链表来思考这个问题！假设从1城市出发，由于每个城市肯定只走一次，1后面是&amp;ndash;&amp;gt;?&lt;/li&gt;
+&lt;li&gt;设定完矩阵/数组就可以设定模拟退火了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;模型参数优化&#34;&gt;模型参数优化&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A题常见题型 可以归类为参数辨识（构建含有参数的模型反推参数值）和参数优化（已经有模型，获得最佳参数组合）。&lt;/li&gt;
+&lt;li&gt;常见解法：for循环遍历/蒙特卡洛/启发式算法。&lt;/li&gt;
+&lt;li&gt;结合微分方程：水箱问题就是一例&lt;/li&gt;
+&lt;li&gt;决策变量的编码，对整数，用二进制进行编码，不用整数编码，为什么？方便进行扰动。
+扰动规则？某几位进行反转（0-1互换）或者交换即可。&lt;/li&gt;
+&lt;li&gt;变换与解码&lt;/li&gt;
+&lt;li&gt;图标给出结果&lt;/li&gt;
+&lt;li&gt;注：模拟退火算法编码量小，但是是单线程的，收敛速度很慢，无法同时评估多个候选解，总优化时间大幅增加。但是利用AI可以很快重构模拟退火算法&amp;ndash;&amp;gt;遗传算法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</description>
     </item>
     <item>
       <title>关于我</title>
