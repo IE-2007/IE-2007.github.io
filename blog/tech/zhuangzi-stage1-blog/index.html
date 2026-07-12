@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>大周礼时代网站仿制第一阶段：典故问答API | IE-2007G的个人主页</title>
+<meta name="keywords" content="RAG, NLP, 阿里云函数计算, 庄子, Python, 阶段成果">
+<meta name="description" content="庄子典故问答系统第一阶段完成：208个典故结构化、混合检索RAG系统、阿里云FC部署、公网可访问API。这是整体项目计划的第一步。">
+<meta name="author" content="IE-2007G">
+<link rel="canonical" href="https://ie-2007.github.io/blog/tech/zhuangzi-stage1-blog/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ie-2007.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ie-2007.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ie-2007.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ie-2007.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ie-2007.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://ie-2007.github.io/blog/tech/zhuangzi-stage1-blog/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" crossorigin></script>
+<meta property="og:url" content="https://ie-2007.github.io/blog/tech/zhuangzi-stage1-blog/">
+  <meta property="og:site_name" content="IE-2007G的个人主页">
+  <meta property="og:title" content="大周礼时代网站仿制第一阶段：典故问答API">
+  <meta property="og:description" content="庄子典故问答系统第一阶段完成：208个典故结构化、混合检索RAG系统、阿里云FC部署、公网可访问API。这是整体项目计划的第一步。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-07-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-12T00:00:00+00:00">
+    <meta property="article:tag" content="RAG">
+    <meta property="article:tag" content="NLP">
+    <meta property="article:tag" content="阿里云函数计算">
+    <meta property="article:tag" content="庄子">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="阶段成果">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="大周礼时代网站仿制第一阶段：典故问答API">
+  <meta name="twitter:description" content="庄子典故问答系统第一阶段完成：208个典故结构化、混合检索RAG系统、阿里云FC部署、公网可访问API。这是整体项目计划的第一步。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "我的博客",
+      "item": "https://ie-2007.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "技术",
+      "item": "https://ie-2007.github.io/blog/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "大周礼时代网站仿制第一阶段：典故问答API",
+      "item": "https://ie-2007.github.io/blog/tech/zhuangzi-stage1-blog/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "大周礼时代网站仿制第一阶段：典故问答API",
+  "name": "大周礼时代网站仿制第一阶段：典故问答API",
+  "description": "庄子典故问答系统第一阶段完成：208个典故结构化、混合检索RAG系统、阿里云FC部署、公网可访问API。这是整体项目计划的第一步。",
+  "keywords": [
+    "RAG", "NLP", "阿里云函数计算", "庄子", "Python", "阶段成果"
+  ],
+  "articleBody": " 项目定位：本文介绍的是\"合乎庄子\"整体项目的第一阶段成果。完整的\"合乎庄子\"项目计划包含多个模块，本文所述的典故问答API只是其中的基础能力层。后续还将构建前端展示层、知识图谱层、以及面向特定场景的应用层。\n项目简介 《庄子》是道家哲学经典，全书寓言密布、典故分散。本项目想解决的问题：\n能否用自然语言向 AI 提问庄子典故，利用AI精准定位典故，获取可靠译文？\n技术路线：\n数据层：人工整理《庄子》原文中出现的典故列表，按篇章排列。全书 32 篇（《天下》篇不计入典故） 208 个典故结构化（原文 + 翻译 + 解读 + 关键词） 检索层：BM25 全文检索 + 向量语义检索 + RRF 融合排序 生成层：DeepSeek API 生成带引用的回答 部署层：阿里云函数计算 FC（公网可访问） 为什么先做API 整体项目计划中，典故问答API是基础能力层。它的设计原则：\n无状态、可复用：API只负责检索和生成，不绑定任何前端。任何客户端（网页、小程序、命令行工具）都可以调用。 轻量可迁移：部署在函数计算上，按需伸缩，冷启动30秒内，后续请求毫秒级响应。 数据与逻辑分离：208条典故数据独立存储，检索算法可独立迭代，LLM可替换。 这样做的好处是：后续不管前端怎么变（是做成网页、小程序、还是嵌入到其他系统），后端API都不用动。\n技术选型理由 为什么用混合检索而不是纯向量？ 向量检索擅长语义理解（比如\"庄子如何看待生死\"），但对精确关键词（比如\"庖丁解牛\"）效果不如全文检索。\n实测数据：\n纯BM25 Top-1准确率：83.3% 纯向量 Top-1准确率：约75% 混合检索（RRF融合）Top-1准确率：约90% 两者互补，效果显著。\n为什么用阿里云FC而不是ECS？ 按需付费：没人访问时不收费，适合演示项目 免运维：不用管服务器、域名、HTTPS证书 自动伸缩：突然有人访问时自动扩容 代价是冷启动慢（首次请求30秒），但对于演示场景可以接受。\n为什么不用现成的RAG框架？ LangChain、LlamaIndex这些框架确实能更快搭建RAG系统，但本项目选择从零实现，原因是：\n数据量小：208条典故，不需要复杂的文档切片、向量数据库 可控性：自己实现可以精确控制每个环节（检索策略、prompt模板、结果格式） 学习价值：理解RAG的每个细节，比调API更有收获 技术栈总结 层级 技术 数据处理 Python + JSON + SQLite FTS5 向量检索 BAAI/bge-m3 + numpy LLM DeepSeek Chat API Web框架 FastAPI + Uvicorn 部署平台 阿里云函数计算FC 前端 纯HTML/CSS/JavaScript 项目地址 源码仓库：GitHub - IE-2007/zhuangzi-api-demo 在线演示：典故问答演示 API地址：https://zhuangzi-api-nsmksnpnld.cn-shanghai.fcapp.run ",
+  "wordCount" : "88",
+  "inLanguage": "zh",
+  "datePublished": "2026-07-12T00:00:00Z",
+  "dateModified": "2026-07-12T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "IE-2007G"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ie-2007.github.io/blog/tech/zhuangzi-stage1-blog/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IE-2007G的个人主页",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ie-2007.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://ie-2007.github.io/" accesskey="h" title="IE-2007G的个人主页 (Alt + H)">IE-2007G的个人主页</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://ie-2007.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ie-2007.github.io/blog/" title="博客">
+                    <span>博客</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ie-2007.github.io/portfolio/" title="作品集">
+                    <span>作品集</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ie-2007.github.io/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      大周礼时代网站仿制第一阶段：典故问答API
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-07-12 00:00:00 +0000 UTC'>2026年7月12日</span>&nbsp;·&nbsp;<span>IE-2007G</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><blockquote>
+<p><strong>项目定位</strong>：本文介绍的是&quot;合乎庄子&quot;整体项目的第一阶段成果。完整的&quot;合乎庄子&quot;项目计划包含多个模块，本文所述的典故问答API只是其中的基础能力层。后续还将构建前端展示层、知识图谱层、以及面向特定场景的应用层。</p>
+</blockquote>
+<h2 id="项目简介">项目简介<a hidden class="anchor" aria-hidden="true" href="#项目简介">#</a></h2>
+<p>《庄子》是道家哲学经典，全书寓言密布、典故分散。本项目想解决的问题：</p>
+<p><strong>能否用自然语言向 AI 提问庄子典故，利用AI精准定位典故，获取可靠译文？</strong></p>
+<p>技术路线：</p>
+<ul>
+<li><strong>数据层</strong>：人工整理《庄子》原文中出现的典故列表，按篇章排列。全书 32 篇（《天下》篇不计入典故） 208 个典故结构化（原文 + 翻译 + 解读 + 关键词）</li>
+<li><strong>检索层</strong>：BM25 全文检索 + 向量语义检索 + RRF 融合排序</li>
+<li><strong>生成层</strong>：DeepSeek API 生成带引用的回答</li>
+<li><strong>部署层</strong>：阿里云函数计算 FC（公网可访问）</li>
+</ul>
+<h2 id="为什么先做api">为什么先做API<a hidden class="anchor" aria-hidden="true" href="#为什么先做api">#</a></h2>
+<p>整体项目计划中，典故问答API是<strong>基础能力层</strong>。它的设计原则：</p>
+<ol>
+<li><strong>无状态、可复用</strong>：API只负责检索和生成，不绑定任何前端。任何客户端（网页、小程序、命令行工具）都可以调用。</li>
+<li><strong>轻量可迁移</strong>：部署在函数计算上，按需伸缩，冷启动30秒内，后续请求毫秒级响应。</li>
+<li><strong>数据与逻辑分离</strong>：208条典故数据独立存储，检索算法可独立迭代，LLM可替换。</li>
+</ol>
+<p>这样做的好处是：后续不管前端怎么变（是做成网页、小程序、还是嵌入到其他系统），后端API都不用动。</p>
+<h2 id="技术选型理由">技术选型理由<a hidden class="anchor" aria-hidden="true" href="#技术选型理由">#</a></h2>
+<h3 id="为什么用混合检索而不是纯向量">为什么用混合检索而不是纯向量？<a hidden class="anchor" aria-hidden="true" href="#为什么用混合检索而不是纯向量">#</a></h3>
+<p>向量检索擅长语义理解（比如&quot;庄子如何看待生死&quot;），但对精确关键词（比如&quot;庖丁解牛&quot;）效果不如全文检索。</p>
+<p>实测数据：</p>
+<ul>
+<li>纯BM25 Top-1准确率：83.3%</li>
+<li>纯向量 Top-1准确率：约75%</li>
+<li>混合检索（RRF融合）Top-1准确率：<strong>约90%</strong></li>
+</ul>
+<p>两者互补，效果显著。</p>
+<h3 id="为什么用阿里云fc而不是ecs">为什么用阿里云FC而不是ECS？<a hidden class="anchor" aria-hidden="true" href="#为什么用阿里云fc而不是ecs">#</a></h3>
+<ul>
+<li><strong>按需付费</strong>：没人访问时不收费，适合演示项目</li>
+<li><strong>免运维</strong>：不用管服务器、域名、HTTPS证书</li>
+<li><strong>自动伸缩</strong>：突然有人访问时自动扩容</li>
+</ul>
+<p>代价是冷启动慢（首次请求30秒），但对于演示场景可以接受。</p>
+<h3 id="为什么不用现成的rag框架">为什么不用现成的RAG框架？<a hidden class="anchor" aria-hidden="true" href="#为什么不用现成的rag框架">#</a></h3>
+<p>LangChain、LlamaIndex这些框架确实能更快搭建RAG系统，但本项目选择从零实现，原因是：</p>
+<ol>
+<li><strong>数据量小</strong>：208条典故，不需要复杂的文档切片、向量数据库</li>
+<li><strong>可控性</strong>：自己实现可以精确控制每个环节（检索策略、prompt模板、结果格式）</li>
+<li><strong>学习价值</strong>：理解RAG的每个细节，比调API更有收获</li>
+</ol>
+<h2 id="技术栈总结">技术栈总结<a hidden class="anchor" aria-hidden="true" href="#技术栈总结">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>层级</th>
+					<th>技术</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>数据处理</td>
+					<td>Python + JSON + SQLite FTS5</td>
+			</tr>
+			<tr>
+					<td>向量检索</td>
+					<td>BAAI/bge-m3 + numpy</td>
+			</tr>
+			<tr>
+					<td>LLM</td>
+					<td>DeepSeek Chat API</td>
+			</tr>
+			<tr>
+					<td>Web框架</td>
+					<td>FastAPI + Uvicorn</td>
+			</tr>
+			<tr>
+					<td>部署平台</td>
+					<td>阿里云函数计算FC</td>
+			</tr>
+			<tr>
+					<td>前端</td>
+					<td>纯HTML/CSS/JavaScript</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="项目地址">项目地址<a hidden class="anchor" aria-hidden="true" href="#项目地址">#</a></h2>
+<ul>
+<li><strong>源码仓库</strong>：<a href="https://github.com/IE-2007/zhuangzi-api-demo">GitHub - IE-2007/zhuangzi-api-demo</a></li>
+<li><strong>在线演示</strong>：<a href="https://www.bilibili.com/video/BV1gBNA6kEpS/?vd_source=4e32bc1b6c04ae95d38f0017831df13a">典故问答演示</a></li>
+<li><strong>API地址</strong>：<code>https://zhuangzi-api-nsmksnpnld.cn-shanghai.fcapp.run</code></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://ie-2007.github.io/tags/rag/">RAG</a></li>
+      <li><a href="https://ie-2007.github.io/tags/nlp/">NLP</a></li>
+      <li><a href="https://ie-2007.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E8%AE%A1%E7%AE%97/">阿里云函数计算</a></li>
+      <li><a href="https://ie-2007.github.io/tags/%E5%BA%84%E5%AD%90/">庄子</a></li>
+      <li><a href="https://ie-2007.github.io/tags/python/">Python</a></li>
+      <li><a href="https://ie-2007.github.io/tags/%E9%98%B6%E6%AE%B5%E6%88%90%E6%9E%9C/">阶段成果</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://ie-2007.github.io/">IE-2007G的个人主页</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

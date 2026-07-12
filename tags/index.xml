@@ -6,6 +6,49 @@
     <description>Recent content in Tags on IE-2007G的个人主页</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ie-2007.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NLP</title>
+      <link>https://ie-2007.github.io/tags/nlp/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://ie-2007.github.io/tags/python/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://ie-2007.github.io/tags/rag/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>阿里云函数计算</title>
+      <link>https://ie-2007.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E8%AE%A1%E7%AE%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>阶段成果</title>
+      <link>https://ie-2007.github.io/tags/%E9%98%B6%E6%AE%B5%E6%88%90%E6%9E%9C/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/tags/%E9%98%B6%E6%AE%B5%E6%88%90%E6%9E%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>庄子</title>
+      <link>https://ie-2007.github.io/tags/%E5%BA%84%E5%AD%90/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/tags/%E5%BA%84%E5%AD%90/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

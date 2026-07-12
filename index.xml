@@ -6,8 +6,15 @@
     <description>Recent content in 首页 on IE-2007G的个人主页</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ie-2007.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>大周礼时代网站仿制第一阶段：典故问答API</title>
+      <link>https://ie-2007.github.io/blog/tech/zhuangzi-stage1-blog/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/blog/tech/zhuangzi-stage1-blog/</guid>
+      <description>庄子典故问答系统第一阶段完成：208个典故结构化、混合检索RAG系统、阿里云FC部署、公网可访问API。这是整体项目计划的第一步。</description>
+    </item>
     <item>
       <title>数学建模赛前系列讲座笔记(2)</title>
       <link>https://ie-2007.github.io/blog/study/math_modeling_notes260707/</link>
