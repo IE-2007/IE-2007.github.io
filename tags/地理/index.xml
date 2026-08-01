@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>地理 on IE-2007G的个人主页</title>
+    <link>https://ie-2007.github.io/tags/%E5%9C%B0%E7%90%86/</link>
+    <description>Recent content in 地理 on IE-2007G的个人主页</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 10 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ie-2007.github.io/tags/%E5%9C%B0%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>地理小科普</title>
+      <link>https://ie-2007.github.io/portfolio/projects/geography-guide/</link>
+      <pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://ie-2007.github.io/portfolio/projects/geography-guide/</guid>
+      <description>&lt;h2 id=&#34;项目简介&#34;&gt;项目简介&lt;/h2&gt;
+&lt;p&gt;这是高二上海地理合格考之前整理的地理复习材料与科普文档，涵盖自然地理和人文地理的多个专题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最终版本&lt;/strong&gt;：2.4（2024年6月完成）&lt;br&gt;
+&lt;strong&gt;文件大小&lt;/strong&gt;：113MB&lt;br&gt;
+&lt;strong&gt;形式&lt;/strong&gt;：PDF文档&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;开发历程&#34;&gt;开发历程&lt;/h2&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;日期&lt;/th&gt;
+					&lt;th&gt;进展&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2022-12-19&lt;/td&gt;
+					&lt;td&gt;高一上复习材料完成&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2023-06-16&lt;/td&gt;
+					&lt;td&gt;小科普第一版完成&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2024-05-02&lt;/td&gt;
+					&lt;td&gt;开始制作小科普第二版&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2024-05-12&lt;/td&gt;
+					&lt;td&gt;完成专题1&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2024-05-18&lt;/td&gt;
+					&lt;td&gt;进度：专题4（版本2.1）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2024-05-25&lt;/td&gt;
+					&lt;td&gt;完成专题9，添加前言（版本2.2）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2024-06-02&lt;/td&gt;
+					&lt;td&gt;专题15完成，自然地理部分结束（版本2.3）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2024-06-08&lt;/td&gt;
+					&lt;td&gt;添加结语，补充图片&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2024-06-10&lt;/td&gt;
+					&lt;td&gt;人文部分完成，超链接补全，基本完工（版本2.4）&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;查看文档&#34;&gt;查看文档&lt;/h2&gt;
+&lt;iframe src=&#34;https://ie-2007.github.io/files/一生中地理知识最丰富的时刻.pdf&#34; width=&#34;100%&#34; height=&#34;600px&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://ie-2007.github.io/files/%E4%B8%80%E7%94%9F%E4%B8%AD%E5%9C%B0%E7%90%86%E7%9F%A5%E8%AF%86%E6%9C%80%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%97%B6%E5%88%BB.pdf&#34;&gt;下载PDF&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
